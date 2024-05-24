@@ -8,6 +8,8 @@
     "xml2js": "^0.6.2"
   },
   "scripts": {
+    "build:choice-types": "ts-node src/scripts/parseChoiceTypesForResource.ts",
+    "build:mandatory-elements": "ts-node src/scripts/parseMandatoryElements.ts",
     "build:patient-paths": "ts-node src/scripts/parseCompartmentDefinition.ts",
     "build:code-systems": "ts-node src/scripts/parseCodeSystems.ts && prettier --write src/data/systemMap.ts --log-level silent",
     "build:codes": "ts-node src/scripts/parseCodePath.ts && prettier --write src/data/codePaths.ts --log-level silent",
