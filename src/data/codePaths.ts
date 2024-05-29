@@ -1,4 +1,4 @@
-import { ResourceCodeInfo } from "./types";
+import { ResourceCodeInfo } from "../scripts/types/types";
 
 export const parsedCodePaths: Record<string, ResourceCodeInfo> = {
   Account: {

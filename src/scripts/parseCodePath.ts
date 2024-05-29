@@ -137,7 +137,7 @@ parse(xmlStr)
     fs.writeFileSync(
       outputPath,
       `
-        import { ResourceCodeInfo } from './types';
+        import { ResourceCodeInfo } from '../scripts/types/types';
 
         export const parsedCodePaths: Record<string, ResourceCodeInfo> =
           ${JSON.stringify(data, null, 2)};
