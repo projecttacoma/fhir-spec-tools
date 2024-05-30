@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@projecttacoma/node-fhir-server-core": "^2.2.8",
     "@types/fhir": "^0.0.41",
     "@types/xml2js": "^0.4.14",
     "prettier": "^3.2.5",
