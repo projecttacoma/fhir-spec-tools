@@ -1,15 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import * as fs from "fs";
-import * as path from "path";
-import * as xml2js from "xml2js";
+import * as fs from 'fs';
+import * as path from 'path';
+import * as xml2js from 'xml2js';
 
-const modelInfoPath = path.resolve(
-  path.join(__dirname, "../fhir/fhir-modelinfo-4.0.1.xml")
-);
-const outputPath = path.resolve(
-  path.join(__dirname, "../data/propertyPaths.ts")
-);
-const xmlStr = fs.readFileSync(modelInfoPath, "utf8");
+const modelInfoPath = path.resolve(path.join(__dirname, '../fhir/fhir-modelinfo-4.0.1.xml'));
+const outputPath = path.resolve(path.join(__dirname, '../data/propertyPaths.ts'));
+const xmlStr = fs.readFileSync(modelInfoPath, 'utf8');
 
 /**
  * Parse FHIR Model Info XML and output information about what properties exist
@@ -20,9 +15,7 @@ const xmlStr = fs.readFileSync(modelInfoPath, "utf8");
  */
 export async function parse(xml: string) {
   const { modelInfo } = await xml2js.parseStringPromise(xml);
-  const domainInfo = modelInfo.typeInfo.filter(
-    (ti: any) => ti.$.baseType === "FHIR.DomainResource"
-  );
+  const domainInfo = modelInfo.typeInfo.filter((ti: any) => ti.$.baseType === 'FHIR.DomainResource');
 
   const results: { [key: string]: string[] } = {};
 
@@ -34,17 +27,17 @@ export async function parse(xml: string) {
 }
 
 parse(xmlStr)
-  .then((data) => {
+  .then(data => {
     fs.writeFileSync(
       outputPath,
       `
         export const parsedPropertyPaths: Record<string, string[]> =
           ${JSON.stringify(data, null, 2)};
         `,
-      "utf8"
+      'utf8'
     );
     console.log(`Wrote file to ${outputPath}`);
   })
-  .catch((e) => {
+  .catch(e => {
     console.error(e);
   });

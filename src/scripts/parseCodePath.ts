@@ -1,20 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import * as fs from "fs";
-import * as path from "path";
-import * as xml2js from "xml2js";
-import { ResourceCodeInfo, CodePathInfo } from "./types/types";
+import * as fs from 'fs';
+import * as path from 'path';
+import * as xml2js from 'xml2js';
+import { ResourceCodeInfo, CodePathInfo } from './types/types';
 
-const modelInfoPath = path.resolve(
-  path.join(__dirname, "../fhir/fhir-modelinfo-4.0.1.xml")
-);
-const outputPath = path.resolve(path.join(__dirname, "../data/codePaths.ts"));
-const xmlStr = fs.readFileSync(modelInfoPath, "utf8");
+const modelInfoPath = path.resolve(path.join(__dirname, '../fhir/fhir-modelinfo-4.0.1.xml'));
+const outputPath = path.resolve(path.join(__dirname, '../data/codePaths.ts'));
+const xmlStr = fs.readFileSync(modelInfoPath, 'utf8');
 
 interface ElementChoice {
   $: {
     namespace: string;
     name: string;
-    "xsi:type": string;
+    'xsi:type': string;
   };
 }
 
@@ -27,15 +24,9 @@ interface ElementChoice {
  */
 export async function parse(xml: string) {
   const { modelInfo } = await xml2js.parseStringPromise(xml);
-  const domainInfo = modelInfo.typeInfo.filter(
-    (ti: any) => ti.$.baseType === "FHIR.DomainResource"
-  );
-  const elementInfo = modelInfo.typeInfo.filter(
-    (ti: any) => ti.$.baseType === "FHIR.Element" && !ti.$.identifier
-  );
-  const elementOneValue = elementInfo.filter(
-    (e: any) => e.element.length === 1
-  );
+  const domainInfo = modelInfo.typeInfo.filter((ti: any) => ti.$.baseType === 'FHIR.DomainResource');
+  const elementInfo = modelInfo.typeInfo.filter((ti: any) => ti.$.baseType === 'FHIR.Element' && !ti.$.identifier);
+  const elementOneValue = elementInfo.filter((e: any) => e.element.length === 1);
 
   const results: { [key: string]: ResourceCodeInfo } = {};
 
@@ -65,12 +56,12 @@ export async function parse(xml: string) {
             });
 
             // apply heuristic for selecting
-            if (choices.includes("FHIR.CodeableConcept")) {
-              codeType = "FHIR.CodeableConcept";
-            } else if (choices.includes("FHIR.Coding")) {
-              codeType = "FHIR.Coding";
-            } else if (choices.includes("FHIR.code")) {
-              codeType = "FHIR.code";
+            if (choices.includes('FHIR.CodeableConcept')) {
+              codeType = 'FHIR.CodeableConcept';
+            } else if (choices.includes('FHIR.Coding')) {
+              codeType = 'FHIR.Coding';
+            } else if (choices.includes('FHIR.code')) {
+              codeType = 'FHIR.code';
             }
 
             // all choice types are 0..1 or 1..1 cardinality
@@ -97,35 +88,29 @@ export async function parse(xml: string) {
           choiceType = false;
         }
         // add elements of these three types to the paths of that resource
-        if (
-          codeType === "FHIR.CodeableConcept" ||
-          codeType === "FHIR.Coding" ||
-          codeType === "FHIR.code"
-        ) {
+        if (codeType === 'FHIR.CodeableConcept' || codeType === 'FHIR.Coding' || codeType === 'FHIR.code') {
           paths[elem.$.name] = { codeType, multipleCardinality, choiceType };
-          codeType = "";
-        } else if (codeType && codeType !== "FHIR.string") {
+          codeType = '';
+        } else if (codeType && codeType !== 'FHIR.string') {
           // if the codeType is not one of those three but also not a FHIR.string it may be within a FHIR.Element
-          const codeTypeName = codeType.split("R.");
-          const name = elementOneValue.filter(
-            (e: any) => e.$.name === codeTypeName[1]
-          );
+          const codeTypeName = codeType.split('R.');
+          const name = elementOneValue.filter((e: any) => e.$.name === codeTypeName[1]);
           if (name.length === 1) {
-            if (name[0].element[0].$.elementType === "System.String") {
-              codeType = "FHIR.code";
+            if (name[0].element[0].$.elementType === 'System.String') {
+              codeType = 'FHIR.code';
               paths[elem.$.name] = {
                 codeType,
                 multipleCardinality,
-                choiceType,
+                choiceType
               };
-              codeType = "";
+              codeType = '';
             }
           }
         }
       });
       results[resourceType] = {
         primaryCodePath: primaryCodePath,
-        paths: paths,
+        paths: paths
       };
     }
   });
@@ -133,7 +118,7 @@ export async function parse(xml: string) {
 }
 
 parse(xmlStr)
-  .then((data) => {
+  .then(data => {
     fs.writeFileSync(
       outputPath,
       `
@@ -142,10 +127,10 @@ parse(xmlStr)
         export const parsedCodePaths: Record<string, ResourceCodeInfo> =
           ${JSON.stringify(data, null, 2)};
         `,
-      "utf8"
+      'utf8'
     );
     console.log(`Wrote file to ${outputPath}`);
   })
-  .catch((e) => {
+  .catch(e => {
     console.error(e);
   });

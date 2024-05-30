@@ -1,13 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs';
+import * as path from 'path';
 
-const STRUCTURE_DEFINITIONS_BASE_PATH = path.join(
-  __dirname,
-  "../fhir/resource-definitions"
-);
-const mandatoryElemsOutputPath = path.resolve(
-  path.join(__dirname, "../data/mandatory-elements.json")
-);
+const STRUCTURE_DEFINITIONS_BASE_PATH = path.join(__dirname, '../fhir/resource-definitions');
+const mandatoryElemsOutputPath = path.resolve(path.join(__dirname, '../data/mandatory-elements.json'));
 
 /**
  * Parse the StructureDefinition of resource types supported by this server for mandatory elements
@@ -16,22 +11,20 @@ const mandatoryElemsOutputPath = path.resolve(
  * @returns {Object} object whose keys are resourceTypes and values are arrays of strings that are mandatory elements
  */
 async function main() {
-  const files = fs.readdirSync(STRUCTURE_DEFINITIONS_BASE_PATH).map((f) => ({
-    shortName: f.split(".profile")[0],
-    fullPath: path.join(STRUCTURE_DEFINITIONS_BASE_PATH, f),
+  const files = fs.readdirSync(STRUCTURE_DEFINITIONS_BASE_PATH).map(f => ({
+    shortName: f.split('.profile')[0],
+    fullPath: path.join(STRUCTURE_DEFINITIONS_BASE_PATH, f)
   }));
 
   const mandatoryElementsResults: Record<string, string[]> = {};
 
-  files.forEach((f) => {
+  files.forEach(f => {
     let mandatoryElements: string[] = [];
 
     // read the contents of the file
-    const structureDef = JSON.parse(
-      fs.readFileSync(f.fullPath, "utf8")
-    ) as fhir4.StructureDefinition;
-    structureDef.snapshot?.element.forEach((e) => {
-      const elem = e.id?.split(".");
+    const structureDef = JSON.parse(fs.readFileSync(f.fullPath, 'utf8')) as fhir4.StructureDefinition;
+    structureDef.snapshot?.element.forEach(e => {
+      const elem = e.id?.split('.');
       if (elem && elem.length === 2) {
         if (e.min && e.min >= 1) {
           mandatoryElements.push(elem[1]);
@@ -47,14 +40,10 @@ async function main() {
 }
 
 main()
-  .then((mandatoryElementsResults) => {
-    fs.writeFileSync(
-      mandatoryElemsOutputPath,
-      JSON.stringify(mandatoryElementsResults, null, 2),
-      "utf8"
-    );
+  .then(mandatoryElementsResults => {
+    fs.writeFileSync(mandatoryElemsOutputPath, JSON.stringify(mandatoryElementsResults, null, 2), 'utf8');
     console.log(`Wrote file to ${mandatoryElemsOutputPath}`);
   })
-  .catch((e) => {
+  .catch(e => {
     console.error(e);
   });

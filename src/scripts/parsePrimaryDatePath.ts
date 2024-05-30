@@ -1,16 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import * as fs from "fs";
-import * as path from "path";
-import * as xml2js from "xml2js";
+import * as fs from 'fs';
+import * as path from 'path';
+import * as xml2js from 'xml2js';
 
-const modelInfoPath = path.resolve(
-  path.join(__dirname, "../fhir/fhir-modelinfo-4.0.1.xml")
-);
-const outputPath = path.resolve(
-  path.join(__dirname, "../data/primaryDatePaths.ts")
-);
-const xmlStr = fs.readFileSync(modelInfoPath, "utf8");
-const DATE_TYPES = ["dateTime", "date", "Period"];
+const modelInfoPath = path.resolve(path.join(__dirname, '../fhir/fhir-modelinfo-4.0.1.xml'));
+const outputPath = path.resolve(path.join(__dirname, '../data/primaryDatePaths.ts'));
+const xmlStr = fs.readFileSync(modelInfoPath, 'utf8');
+const DATE_TYPES = ['dateTime', 'date', 'Period'];
 
 export interface DateFieldInfo {
   isChoiceType?: boolean;
@@ -26,9 +21,7 @@ export interface PrimaryDatePathInfo {
 
 async function parseModelInfo(xml: string): Promise<PrimaryDatePathInfo> {
   const { modelInfo } = await xml2js.parseStringPromise(xml);
-  const domainInfo = modelInfo.typeInfo.filter(
-    (ti: any) => ti.$.baseType === "FHIR.DomainResource"
-  );
+  const domainInfo = modelInfo.typeInfo.filter((ti: any) => ti.$.baseType === 'FHIR.DomainResource');
   const dateInfo: any = {};
 
   domainInfo.forEach((di: any) => {
@@ -43,21 +36,15 @@ function getDateTypes(resourceInfo: any): DateInfo {
   return resourceInfo.reduce((acc: any, e: any) => {
     const propName = e.$.name;
     if (e.$.elementType) {
-      const splitElementType = e.$.elementType.split(".");
-      if (
-        splitElementType[0] === "FHIR" &&
-        DATE_TYPES.includes(splitElementType[1])
-      ) {
+      const splitElementType = e.$.elementType.split('.');
+      if (splitElementType[0] === 'FHIR' && DATE_TYPES.includes(splitElementType[1])) {
         acc[propName] = { dataTypes: [splitElementType[1]] };
       }
     } else if (e.elementTypeSpecifier) {
       const dateChoices: string[] = [];
-      if (e.elementTypeSpecifier[0].$["xsi:type"] === "ChoiceTypeSpecifier") {
+      if (e.elementTypeSpecifier[0].$['xsi:type'] === 'ChoiceTypeSpecifier') {
         e.elementTypeSpecifier[0].choice.forEach((choice: any) => {
-          if (
-            choice.$.namespace === "FHIR" &&
-            DATE_TYPES.includes(choice.$.name)
-          ) {
+          if (choice.$.namespace === 'FHIR' && DATE_TYPES.includes(choice.$.name)) {
             dateChoices.push(choice.$.name);
           }
         });
@@ -71,15 +58,20 @@ function getDateTypes(resourceInfo: any): DateInfo {
   }, {});
 }
 
-parseModelInfo(xmlStr).then((data) => {
-  fs.writeFileSync(
-    outputPath,
-    `  
-import { PrimaryDatePathInfo } from '../scripts/parsePrimaryDatePath'
+parseModelInfo(xmlStr)
+  .then(data => {
+    fs.writeFileSync(
+      outputPath,
+      `  
+  import { PrimaryDatePathInfo } from '../scripts/parsePrimaryDatePath'
 
-export const parsedPrimaryDatePaths: PrimaryDatePathInfo =
-  ${JSON.stringify(data, null, 2)};
-          `,
-    "utf8"
-  );
-});
+  export const parsedPrimaryDatePaths: PrimaryDatePathInfo =
+    ${JSON.stringify(data, null, 2)};
+            `,
+      'utf8'
+    );
+    console.log(`Wrote file to ${outputPath}`);
+  })
+  .catch(e => {
+    console.error(e);
+  });

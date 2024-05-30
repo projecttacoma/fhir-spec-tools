@@ -1,556 +1,556 @@
-import { PrimaryDatePathInfo } from "../scripts/parsePrimaryDatePath";
+import { PrimaryDatePathInfo } from '../scripts/parsePrimaryDatePath';
 
 export const parsedPrimaryDatePaths: PrimaryDatePathInfo = {
   Account: {
     servicePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   ActivityDefinition: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     timing: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   AdverseEvent: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     detected: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     recordedDate: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   AllergyIntolerance: {
     onset: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     recordedDate: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     lastOccurrence: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Appointment: {
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   AppointmentResponse: {},
   AuditEvent: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Basic: {
     created: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   BiologicallyDerivedProduct: {},
   BodyStructure: {},
   CapabilityStatement: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   CarePlan: {
     period: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   CareTeam: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   CatalogEntry: {
     validityPeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     validTo: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     lastUpdated: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ChargeItem: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     enteredDate: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ChargeItemDefinition: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Claim: {
     billablePeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ClaimResponse: {
     created: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     preAuthPeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   ClinicalImpression: {
     effective: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   CodeSystem: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Communication: {
     sent: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     received: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   CommunicationRequest: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     authoredOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   CompartmentDefinition: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Composition: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ConceptMap: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Condition: {
     onset: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     abatement: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     recordedDate: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Consent: {
     dateTime: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Contract: {
     issued: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     applies: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Coverage: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   CoverageEligibilityRequest: {
     serviced: {
       isChoiceType: true,
-      dataTypes: ["date", "Period"],
+      dataTypes: ['date', 'Period']
     },
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   CoverageEligibilityResponse: {
     serviced: {
       isChoiceType: true,
-      dataTypes: ["date", "Period"],
+      dataTypes: ['date', 'Period']
     },
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   DetectedIssue: {
     identified: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   Device: {
     manufactureDate: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     expirationDate: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   DeviceDefinition: {},
   DeviceMetric: {},
   DeviceRequest: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     authoredOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   DeviceUseStatement: {
     timing: {
       isChoiceType: true,
-      dataTypes: ["Period", "dateTime"],
+      dataTypes: ['Period', 'dateTime']
     },
     recordedOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   DiagnosticReport: {
     effective: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   DocumentManifest: {
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   DocumentReference: {},
   EffectEvidenceSynthesis: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Encounter: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Endpoint: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   EnrollmentRequest: {
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   EnrollmentResponse: {
     created: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   EpisodeOfCare: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   EventDefinition: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Evidence: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   EvidenceVariable: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   ExampleScenario: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ExplanationOfBenefit: {
     billablePeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     created: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     benefitPeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   FamilyMemberHistory: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     born: {
       isChoiceType: true,
-      dataTypes: ["Period", "date"],
+      dataTypes: ['Period', 'date']
     },
     deceased: {
       isChoiceType: true,
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   Flag: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Goal: {
     start: {
       isChoiceType: true,
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     statusDate: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   GraphDefinition: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Group: {},
   GuidanceResponse: {
     occurrenceDateTime: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   HealthcareService: {},
   ImagingStudy: {
     started: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Immunization: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     recorded: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     expirationDate: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   ImmunizationEvaluation: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ImmunizationRecommendation: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ImplementationGuide: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   InsurancePlan: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Invoice: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Library: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Linkage: {},
   List: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Location: {},
   Measure: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   MeasureReport: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Media: {
     created: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   Medication: {},
   MedicationAdministration: {
     effective: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   MedicationDispense: {
     whenPrepared: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     whenHandedOver: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   MedicationKnowledge: {},
   MedicationRequest: {
     authoredOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   MedicationStatement: {
     effective: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     dateAsserted: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   MedicinalProduct: {},
   MedicinalProductAuthorization: {
     statusDate: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     restoreDate: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     validityPeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     dataExclusivityPeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     dateOfFirstAuthorization: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     internationalBirthDate: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   MedicinalProductContraindication: {},
   MedicinalProductIndication: {},
@@ -562,238 +562,238 @@ export const parsedPrimaryDatePaths: PrimaryDatePathInfo = {
   MedicinalProductUndesirableEffect: {},
   MessageDefinition: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   MessageHeader: {},
   MolecularSequence: {},
   NamingSystem: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   NutritionOrder: {
     dateTime: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Observation: {
     effective: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     value: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   ObservationDefinition: {},
   OperationDefinition: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   OperationOutcome: {},
   Organization: {},
   OrganizationAffiliation: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Patient: {
     birthDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     deceased: {
       isChoiceType: true,
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   PaymentNotice: {
     created: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     paymentDate: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   PaymentReconciliation: {
     period: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     created: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     paymentDate: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   Person: {
     birthDate: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   PlanDefinition: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Practitioner: {
     birthDate: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   PractitionerRole: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Procedure: {
     performed: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   Provenance: {
     occurred: {
       isChoiceType: true,
-      dataTypes: ["Period", "dateTime"],
-    },
+      dataTypes: ['Period', 'dateTime']
+    }
   },
   Questionnaire: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   QuestionnaireResponse: {
     authored: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   RelatedPerson: {
     birthDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   RequestGroup: {
     authoredOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ResearchDefinition: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   ResearchElementDefinition: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   ResearchStudy: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   ResearchSubject: {
     period: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   RiskAssessment: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   RiskEvidenceSynthesis: {
     date: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     approvalDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     lastReviewDate: {
-      dataTypes: ["date"],
+      dataTypes: ['date']
     },
     effectivePeriod: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   Schedule: {
     planningHorizon: {
-      dataTypes: ["Period"],
-    },
+      dataTypes: ['Period']
+    }
   },
   SearchParameter: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ServiceRequest: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     authoredOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Slot: {},
   Specimen: {
     receivedTime: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   SpecimenDefinition: {},
   StructureDefinition: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   StructureMap: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Subscription: {},
   Substance: {},
@@ -806,66 +806,66 @@ export const parsedPrimaryDatePaths: PrimaryDatePathInfo = {
   SupplyDelivery: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
-    },
+      dataTypes: ['dateTime', 'Period']
+    }
   },
   SupplyRequest: {
     occurrence: {
       isChoiceType: true,
-      dataTypes: ["dateTime", "Period"],
+      dataTypes: ['dateTime', 'Period']
     },
     authoredOn: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   Task: {
     executionPeriod: {
-      dataTypes: ["Period"],
+      dataTypes: ['Period']
     },
     authoredOn: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     lastModified: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   TerminologyCapabilities: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   TestReport: {
     issued: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   TestScript: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   ValueSet: {
     date: {
-      dataTypes: ["dateTime"],
-    },
+      dataTypes: ['dateTime']
+    }
   },
   VerificationResult: {
     statusDate: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     lastPerformed: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     nextScheduled: {
-      dataTypes: ["date"],
-    },
+      dataTypes: ['date']
+    }
   },
   VisionPrescription: {
     created: {
-      dataTypes: ["dateTime"],
+      dataTypes: ['dateTime']
     },
     dateWritten: {
-      dataTypes: ["dateTime"],
-    },
-  },
+      dataTypes: ['dateTime']
+    }
+  }
 };

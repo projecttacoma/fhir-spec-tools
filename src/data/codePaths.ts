@@ -1,1878 +1,1878 @@
-import { ResourceCodeInfo } from "../scripts/types/types";
+import { ResourceCodeInfo } from '../scripts/types/types';
 
 export const parsedCodePaths: Record<string, ResourceCodeInfo> = {
   Account: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   ActivityDefinition: {
-    primaryCodePath: "topic",
+    primaryCodePath: 'topic',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       subject: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       topic: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       kind: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       product: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       bodySite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   AdverseEvent: {
-    primaryCodePath: "event",
+    primaryCodePath: 'event',
     paths: {
       actuality: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       event: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       seriousness: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       severity: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       outcome: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   AllergyIntolerance: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       clinicalStatus: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       verificationStatus: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       criticality: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Appointment: {
-    primaryCodePath: "serviceType",
+    primaryCodePath: 'serviceType',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       cancelationReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       serviceCategory: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       serviceType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       specialty: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       appointmentType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Basic: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   BodyStructure: {
-    primaryCodePath: "location",
+    primaryCodePath: 'location',
     paths: {
       morphology: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       location: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       locationQualifier: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   CarePlan: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   CareTeam: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   ChargeItem: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       bodysite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       reason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       product: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
-      },
-    },
+        choiceType: true
+      }
+    }
   },
   ChargeItemDefinition: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Claim: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       subType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       use: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       fundsReserve: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   ClinicalImpression: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       prognosisCodeableConcept: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Communication: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       medium: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       topic: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   CommunicationRequest: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       medium: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Composition: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       confidentiality: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Condition: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       clinicalStatus: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       verificationStatus: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       severity: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       bodySite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Consent: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       scope: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       policyRule: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Coverage: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       relationship: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   DetectedIssue: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       severity: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Device: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       safety: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   DeviceMetric: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       unit: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       operationalStatus: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       color: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   DeviceRequest: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       performerType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   DeviceUseStatement: {
-    primaryCodePath: "device.code",
+    primaryCodePath: 'device.code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       bodySite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   DiagnosticReport: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       conclusionCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Encounter: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       class: {
-        codeType: "FHIR.Coding",
+        codeType: 'FHIR.Coding',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       serviceType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   EpisodeOfCare: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   ExplanationOfBenefit: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       subType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       use: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       fundsReserveRequested: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       fundsReserve: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       outcome: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       formCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Flag: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Goal: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       lifecycleStatus: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       achievementStatus: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       description: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       start: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       outcomeCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Group: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       type: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   GuidanceResponse: {
-    primaryCodePath: "module",
+    primaryCodePath: 'module',
     paths: {
       module: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   HealthcareService: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       specialty: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       serviceProvisionCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       program: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       characteristic: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       communication: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       referralMethod: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Immunization: {
-    primaryCodePath: "vaccineCode",
+    primaryCodePath: 'vaccineCode',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       vaccineCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reportOrigin: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       site: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       route: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       subpotentReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       programEligibility: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       fundingSource: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Library: {
-    primaryCodePath: "topic",
+    primaryCodePath: 'topic',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       subject: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       topic: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   List: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       mode: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       orderedBy: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       emptyReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Location: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       operationalStatus: {
-        codeType: "FHIR.Coding",
+        codeType: 'FHIR.Coding',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       mode: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       physicalType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Measure: {
-    primaryCodePath: "topic",
+    primaryCodePath: 'topic',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       subject: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       topic: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       scoring: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       compositeScoring: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       improvementNotation: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MeasureReport: {
-    primaryCodePath: "measure.topic",
+    primaryCodePath: 'measure.topic',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       improvementNotation: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Medication: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       form: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MedicationAdministration: {
-    primaryCodePath: "medication",
+    primaryCodePath: 'medication',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       medication: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MedicationDispense: {
-    primaryCodePath: "medication",
+    primaryCodePath: 'medication',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       medication: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MedicationKnowledge: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       doseForm: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       productType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       intendedRoute: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MedicationRequest: {
-    primaryCodePath: "medication",
+    primaryCodePath: 'medication',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       medication: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       performerType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       courseOfTherapyType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MedicationStatement: {
-    primaryCodePath: "medication",
+    primaryCodePath: 'medication',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       medication: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   MessageDefinition: {
-    primaryCodePath: "event",
+    primaryCodePath: 'event',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       event: {
-        codeType: "FHIR.Coding",
+        codeType: 'FHIR.Coding',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       category: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       responseRequired: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Observation: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       value: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       dataAbsentReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       interpretation: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       bodySite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       method: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   ObservationDefinition: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       permittedDataType: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       method: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   OperationDefinition: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       kind: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       resource: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   OperationOutcome: {
-    primaryCodePath: "issue.code",
-    paths: {},
+    primaryCodePath: 'issue.code',
+    paths: {}
   },
   PractitionerRole: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       specialty: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Procedure: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       bodySite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       outcome: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       complication: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       followUp: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       usedCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Questionnaire: {
-    primaryCodePath: "name",
+    primaryCodePath: 'name',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       subjectType: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.Coding",
+        codeType: 'FHIR.Coding',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   RelatedPerson: {
-    primaryCodePath: "relationship",
+    primaryCodePath: 'relationship',
     paths: {
       relationship: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       gender: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   RequestGroup: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   RiskAssessment: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       method: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   SearchParameter: {
-    primaryCodePath: "target",
+    primaryCodePath: 'target',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       jurisdiction: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       base: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       xpathUsage: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       target: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       comparator: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       modifier: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   ServiceRequest: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       orderDetail: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       asNeeded: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       performerType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       locationCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       bodySite: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Specimen: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       condition: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Substance: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   SupplyDelivery: {
-    primaryCodePath: "type",
+    primaryCodePath: 'type',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       type: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   SupplyRequest: {
-    primaryCodePath: "category",
+    primaryCodePath: 'category',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       category: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       item: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: true,
+        choiceType: true
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
-      },
-    },
+        choiceType: false
+      }
+    }
   },
   Task: {
-    primaryCodePath: "code",
+    primaryCodePath: 'code',
     paths: {
       status: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       statusReason: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       businessStatus: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       intent: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       priority: {
-        codeType: "FHIR.code",
+        codeType: 'FHIR.code',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       code: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
+        choiceType: false
       },
       performerType: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: true,
-        choiceType: false,
+        choiceType: false
       },
       reasonCode: {
-        codeType: "FHIR.CodeableConcept",
+        codeType: 'FHIR.CodeableConcept',
         multipleCardinality: false,
-        choiceType: false,
-      },
-    },
-  },
+        choiceType: false
+      }
+    }
+  }
 };

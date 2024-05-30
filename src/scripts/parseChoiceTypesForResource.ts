@@ -1,13 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs';
+import * as path from 'path';
 
-const STRUCTURE_DEFINITIONS_BASE_PATH = path.join(
-  __dirname,
-  "../fhir/resource-definitions"
-);
-const choiceTypesOutputPath = path.resolve(
-  path.join(__dirname, "../data/choice-types.json")
-);
+const STRUCTURE_DEFINITIONS_BASE_PATH = path.join(__dirname, '../fhir/resource-definitions');
+const choiceTypesOutputPath = path.resolve(path.join(__dirname, '../data/choice-types.json'));
 
 /**
  * Parse the StructureDefinition of resource types supported by this server for choice type elements
@@ -17,28 +12,23 @@ const choiceTypesOutputPath = path.resolve(
  * whose values are an array of all the types it can be
  */
 async function main() {
-  const files = fs.readdirSync(STRUCTURE_DEFINITIONS_BASE_PATH).map((f) => ({
-    shortName: f.split(".profile")[0],
-    fullPath: path.join(STRUCTURE_DEFINITIONS_BASE_PATH, f),
+  const files = fs.readdirSync(STRUCTURE_DEFINITIONS_BASE_PATH).map(f => ({
+    shortName: f.split('.profile')[0],
+    fullPath: path.join(STRUCTURE_DEFINITIONS_BASE_PATH, f)
   }));
 
-  const choiceTypeElementsResults: Record<
-    string,
-    Record<string, string[]>
-  > = {};
+  const choiceTypeElementsResults: Record<string, Record<string, string[]>> = {};
 
-  files.forEach((f) => {
+  files.forEach(f => {
     let choiceTypeElements: Record<string, string[]> = {};
 
     // read the contents of the file
-    const structureDef = JSON.parse(
-      fs.readFileSync(f.fullPath, "utf8")
-    ) as fhir4.StructureDefinition;
-    structureDef.snapshot?.element.forEach((e) => {
-      if (e.path.endsWith("[x]") && e.path.split(".").length <= 2) {
-        const choiceType = e.id?.split(".")[1];
+    const structureDef = JSON.parse(fs.readFileSync(f.fullPath, 'utf8')) as fhir4.StructureDefinition;
+    structureDef.snapshot?.element.forEach(e => {
+      if (e.path.endsWith('[x]') && e.path.split('.').length <= 2) {
+        const choiceType = e.id?.split('.')[1];
         let choiceTypeTypes: string[] = [];
-        e.type?.forEach((type) => {
+        e.type?.forEach(type => {
           choiceTypeTypes.push(type.code);
         });
         if (choiceType) {
@@ -55,14 +45,10 @@ async function main() {
 }
 
 main()
-  .then((choiceTypeElementsResults) => {
-    fs.writeFileSync(
-      choiceTypesOutputPath,
-      JSON.stringify(choiceTypeElementsResults, null, 2),
-      "utf8"
-    );
+  .then(choiceTypeElementsResults => {
+    fs.writeFileSync(choiceTypesOutputPath, JSON.stringify(choiceTypeElementsResults, null, 2), 'utf8');
     console.log(`Wrote file to ${choiceTypesOutputPath}`);
   })
-  .catch((e) => {
+  .catch(e => {
     console.error(e);
   });

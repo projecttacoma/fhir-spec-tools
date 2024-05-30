@@ -1,13 +1,11 @@
 // Code systems source: https://cts.nlm.nih.gov/fhir/metadata?_format=json
 
-import { readFileSync, writeFileSync } from "fs";
-import path from "path";
+import { readFileSync, writeFileSync } from 'fs';
+import path from 'path';
 
-const inputPath = path.resolve(
-  path.join(__dirname, "../fhir/cts-metadata.json")
-);
-const outputPath = path.resolve(path.join(__dirname, "../data/systemMap.ts"));
-const ctsMetadata = readFileSync(inputPath, "utf8");
+const inputPath = path.resolve(path.join(__dirname, '../fhir/cts-metadata.json'));
+const outputPath = path.resolve(path.join(__dirname, '../data/systemMap.ts'));
+const ctsMetadata = readFileSync(inputPath, 'utf8');
 const codeSystemData = JSON.parse(ctsMetadata) as fhir4.CapabilityStatement;
 
 /**
@@ -15,9 +13,9 @@ const codeSystemData = JSON.parse(ctsMetadata) as fhir4.CapabilityStatement;
  */
 function createMapping(codeSystemData: fhir4.CapabilityStatement) {
   const systemMapping: Record<string, string> = {};
-  codeSystemData.extension?.forEach((extension) => {
-    const systemURLExt = extension.extension?.find((e) => e.url === "system");
-    const systemNameExt = extension.extension?.find((e) => e.url === "name");
+  codeSystemData.extension?.forEach(extension => {
+    const systemURLExt = extension.extension?.find(e => e.url === 'system');
+    const systemNameExt = extension.extension?.find(e => e.url === 'name');
     if (systemURLExt?.valueUri && systemNameExt?.valueString) {
       systemMapping[systemURLExt.valueUri] = systemNameExt.valueString;
     }
@@ -30,7 +28,7 @@ try {
   writeFileSync(
     outputPath,
     `export const systemMap: Record<string, string> = ${JSON.stringify(data, null, 2)};`,
-    "utf8"
+    'utf8'
   );
   console.log(`Wrote file to ${outputPath}`);
 } catch (e) {
