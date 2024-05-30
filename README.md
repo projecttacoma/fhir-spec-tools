@@ -24,7 +24,7 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
     *	**Input**: compartmentdefinition-patient.json from https://hl7.org/fhir/R4/compartmentdefinition-patient.html
     *	**Output**: patient-attribute-paths.json, patient-search-parameters.json 
     * **Original repo**: deqm-test-server parseCompartmentDefinition.js
-    * **Note**: patient-search-parameters is not used by deqm-test-server but is used in fqm-execution. bulk-export-server also uses the compartmentDefinition, but only uses the resource names, which can be pulled from either of these output files instead. This script is currently dependent on node-fhir-server-code for patient-attribute-paths, but ideally these would be pulled directly from the fhir spec.
+    * **Note**: patient-search-parameters is not used by deqm-test-server but is used in fqm-execution. bulk-export-server also uses the compartmentDefinition, but only uses the resource names, which can be pulled from either of these output files instead. This script is currently dependent on node-fhir-server-core for patient-attribute-paths, but ideally these would be pulled directly from the FHIR spec.
 * parseCodeSystems.ts
     * Run with `npm run build:code-systems`
     *	**Purpose**: Lookup name for each code system url
@@ -49,7 +49,7 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
 * parseDateSearchParam.ts
     * Run with `npm run build:date-search-parameters`
     *	**Purpose**: filter all search parameters to only date parameters
-    * **Format**: fhir searchParams bundle
+    * **Format**: FHIR searchParams bundle
     *	**Input**: search-parameters.json from https://hl7.org/fhir/R4/search-parameters.json
     *	**Output**: dateSearchParameters.ts
     * **Original repo**: fqm-execution (just files, script was not previously committed)
