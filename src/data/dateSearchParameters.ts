@@ -1,6 +1,6 @@
 // Taken from https://hl7.org/fhir/R4/search-parameters.json
 // Includes only date type search parameters
-export const SearchParameters = {
+export const SearchParameters: fhir4.Bundle = {
   resourceType: 'Bundle',
   id: 'searchParams',
   meta: {
