@@ -1,4 +1,11 @@
 {
+  "name": "fhir-spec-tools",
+  "version": "0.0.1",
+  "description": "Scripts and other shared tooling for working with the HL7® FHIR® standard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projecttacoma/fhir-spec-tools.git"
+  },
   "devDependencies": {
     "@projecttacoma/node-fhir-server-core": "^2.2.8",
     "@types/fhir": "^0.0.41",
@@ -19,5 +26,24 @@
     "build:properties": "ts-node src/scripts/parseProperties.ts && prettier --write src/data/propertyPaths.ts --log-level silent",
     "prettier": "prettier --check \"**/*.{js,ts}\"",
     "prettier:fix": "prettier --write \"**/*.{js,ts}\""
-  }
+  },
+  "contributors": [
+    {
+      "name": "Lauren DiCristofaro",
+      "email": "laurend@mitre.org"
+    },
+    {
+      "name": "Chris Hossenlopp",
+      "email": "hossenlopp@mitre.org"
+    },
+    {
+      "name": "Elsa Perelli",
+      "email": "eperelli@mitre.org"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/projecttacoma/fhir-spec-tools/issues"
+  },
+  "homepage": "https://github.com/projecttacoma/fhir-spec-tools#readme"
 }
