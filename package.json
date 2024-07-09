@@ -7,12 +7,11 @@
     "url": "git+https://github.com/projecttacoma/fhir-spec-tools.git"
   },
   "devDependencies": {
-    "@projecttacoma/node-fhir-server-core": "^2.2.8",
     "@types/fhir": "^0.0.41",
     "@types/xml2js": "^0.4.14",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.3",
     "xml2js": "^0.6.2"
   },
   "scripts": {
@@ -25,7 +24,9 @@
     "build:date-search-parameters": "ts-node src/scripts/parseDateSearchParam.ts && prettier --write src/data/dateSearchParameters.ts --log-level silent",
     "build:properties": "ts-node src/scripts/parseProperties.ts && prettier --write src/data/propertyPaths.ts --log-level silent",
     "prettier": "prettier --check \"**/*.{js,ts}\"",
-    "prettier:fix": "prettier --write \"**/*.{js,ts}\""
+    "prettier:fix": "prettier --write \"**/*.{js,ts}\"",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run prettier"
   },
   "contributors": [
     {
@@ -45,5 +46,12 @@
   "bugs": {
     "url": "https://github.com/projecttacoma/fhir-spec-tools/issues"
   },
-  "homepage": "https://github.com/projecttacoma/fhir-spec-tools#readme"
+  "homepage": "https://github.com/projecttacoma/fhir-spec-tools#readme",
+  "dependencies": {
+    "@eslint/js": "^9.6.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^8.57.0",
+    "typescript-eslint": "^7.16.0",
+    "eslint-config-prettier": "^9.1.0"
+  }
 }

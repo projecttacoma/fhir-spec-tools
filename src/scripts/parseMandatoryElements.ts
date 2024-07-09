@@ -19,7 +19,7 @@ async function main() {
   const mandatoryElementsResults: Record<string, string[]> = {};
 
   files.forEach(f => {
-    let mandatoryElements: string[] = [];
+    const mandatoryElements: string[] = [];
 
     // read the contents of the file
     const structureDef = JSON.parse(fs.readFileSync(f.fullPath, 'utf8')) as fhir4.StructureDefinition;
