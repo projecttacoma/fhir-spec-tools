@@ -17,8 +17,8 @@ const searchParamStr = fs.readFileSync(searchParamPath, 'utf8');
  * @return {Object} object whose keys are resourceTypes and values are arrays of strings to use to reference a patient
  */
 async function parse(compartmentJson: string, searchParamJson: string) {
-  const compartmentDefinition = (await JSON.parse(compartmentJson)) as fhir4.CompartmentDefinition;
-  const searchParamBundle = (await JSON.parse(searchParamJson)) as fhir4.Bundle;
+  const compartmentDefinition = JSON.parse(compartmentJson) as fhir4.CompartmentDefinition;
+  const searchParamBundle = JSON.parse(searchParamJson) as fhir4.Bundle;
   const searchParamArray = searchParamBundle.entry?.map(e => e.resource) as fhir4.SearchParameter[];
   const attrResults: Record<string, Array<string>> = {};
   const paramResults: Record<string, Array<string>> = {};
