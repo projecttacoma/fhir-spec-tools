@@ -20,14 +20,14 @@ async function main() {
   const choiceTypeElementsResults: Record<string, Record<string, string[]>> = {};
 
   files.forEach(f => {
-    let choiceTypeElements: Record<string, string[]> = {};
+    const choiceTypeElements: Record<string, string[]> = {};
 
     // read the contents of the file
     const structureDef = JSON.parse(fs.readFileSync(f.fullPath, 'utf8')) as fhir4.StructureDefinition;
     structureDef.snapshot?.element.forEach(e => {
       if (e.path.endsWith('[x]') && e.path.split('.').length <= 2) {
         const choiceType = e.id?.split('.')[1];
-        let choiceTypeTypes: string[] = [];
+        const choiceTypeTypes: string[] = [];
         e.type?.forEach(type => {
           choiceTypeTypes.push(type.code);
         });
