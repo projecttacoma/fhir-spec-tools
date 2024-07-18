@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const STRUCTURE_DEFINITIONS_BASE_PATH = path.join(__dirname, '../fhir/resource-definitions');
-const choiceTypesOutputPath = path.resolve(path.join(__dirname, '../data/choice-types.json'));
+const choiceTypesOutputPath = path.resolve(path.join(__dirname, '../data/choiceTypes.ts'));
 
 /**
  * Parse the StructureDefinition of resource types supported by this server for choice type elements
@@ -46,7 +46,14 @@ async function main() {
 
 main()
   .then(choiceTypeElementsResults => {
-    fs.writeFileSync(choiceTypesOutputPath, JSON.stringify(choiceTypeElementsResults, null, 2), 'utf8');
+    fs.writeFileSync(
+      choiceTypesOutputPath,
+      `
+        export const choiceTypes: Record<string, Record<string, string[]>> =
+          ${JSON.stringify(choiceTypeElementsResults, null, 2)}
+        `,
+      'utf8'
+    );
     console.log(`Wrote file to ${choiceTypesOutputPath}`);
   })
   .catch(e => {

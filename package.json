@@ -2,6 +2,10 @@
   "name": "fhir-spec-tools",
   "version": "0.0.1",
   "description": "Scripts and other shared tooling for working with the HL7® FHIR® standard",
+  "main": "build/index.js",
+  "files": [
+    "build/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/projecttacoma/fhir-spec-tools.git"
@@ -15,6 +19,7 @@
     "xml2js": "^0.6.2"
   },
   "scripts": {
+    "build": "tsc",
     "build:choice-types": "ts-node src/scripts/parseChoiceTypesForResource.ts",
     "build:mandatory-elements": "ts-node src/scripts/parseMandatoryElements.ts",
     "build:patient-paths": "ts-node src/scripts/parseCompartmentDefinition.ts",
