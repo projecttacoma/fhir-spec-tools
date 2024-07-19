@@ -4,7 +4,9 @@
   "description": "Scripts and other shared tooling for working with the HL7® FHIR® standard",
   "main": "build/index.js",
   "files": [
-    "build/*"
+    "build/data/*",
+    "build/index.js",
+    "build/scripts/types/*"
   ],
   "repository": {
     "type": "git",
