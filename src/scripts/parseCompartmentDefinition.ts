@@ -3,8 +3,8 @@ import * as path from 'path';
 
 const compartmentDefPath = path.resolve(path.join(__dirname, '../fhir/compartmentdefinition-patient.json'));
 const searchParamPath = path.resolve(path.join(__dirname, '../fhir/search-parameters.json'));
-const attrOutputPath = path.resolve(path.join(__dirname, '../data/patient-attribute-paths.json'));
-const paramOutputPath = path.resolve(path.join(__dirname, '../data/patient-search-parameters.json'));
+const attrOutputPath = path.resolve(path.join(__dirname, '../data/patient-attribute-paths.ts'));
+const paramOutputPath = path.resolve(path.join(__dirname, '../data/patient-search-parameters.ts'));
 const jsonStr = fs.readFileSync(compartmentDefPath, 'utf8');
 const searchParamStr = fs.readFileSync(searchParamPath, 'utf8');
 
@@ -59,8 +59,22 @@ async function parse(compartmentJson: string, searchParamJson: string) {
 
 parse(jsonStr, searchParamStr)
   .then(data => {
-    fs.writeFileSync(attrOutputPath, JSON.stringify(data.attrResults, null, 2), 'utf8');
-    fs.writeFileSync(paramOutputPath, JSON.stringify(data.paramResults, null, 2), 'utf8');
+    fs.writeFileSync(
+      attrOutputPath,
+      `
+        export const patientAttributePaths: Record<string, string[]> =
+          ${JSON.stringify(data.attrResults, null, 2)};
+        `,
+      'utf8'
+    );
+    fs.writeFileSync(
+      paramOutputPath,
+      `
+        export const patientSearchParameters: Record<string, string[]> =
+          ${JSON.stringify(data.paramResults, null, 2)};
+        `,
+      'utf8'
+    );
 
     console.log(`Wrote file to ${attrOutputPath}`);
     console.log(`Wrote file to ${paramOutputPath}`);

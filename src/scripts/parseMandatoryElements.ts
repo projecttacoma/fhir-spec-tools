@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const STRUCTURE_DEFINITIONS_BASE_PATH = path.join(__dirname, '../fhir/resource-definitions');
-const mandatoryElemsOutputPath = path.resolve(path.join(__dirname, '../data/mandatory-elements.json'));
+const mandatoryElemsOutputPath = path.resolve(path.join(__dirname, '../data/mandatoryElements.ts'));
 
 /**
  * Parse the StructureDefinition of resource types supported by this server for mandatory elements
@@ -41,7 +41,14 @@ async function main() {
 
 main()
   .then(mandatoryElementsResults => {
-    fs.writeFileSync(mandatoryElemsOutputPath, JSON.stringify(mandatoryElementsResults, null, 2), 'utf8');
+    fs.writeFileSync(
+      mandatoryElemsOutputPath,
+      `
+        export const mandatoryElements: Record<string, string[]> =
+          ${JSON.stringify(mandatoryElementsResults, null, 2)};
+        `,
+      'utf8'
+    );
     console.log(`Wrote file to ${mandatoryElemsOutputPath}`);
   })
   .catch(e => {
