@@ -6,7 +6,7 @@
   "files": [
     "build/data/*",
     "build/index.js",
-    "build/scripts/types/*"
+    "build/scripts/types/"
   ],
   "repository": {
     "type": "git",
