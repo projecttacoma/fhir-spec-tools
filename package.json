@@ -8,6 +8,7 @@
     "build/index.js",
     "build/scripts/types/"
   ],
+  "types": "build/scripts/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/projecttacoma/fhir-spec-tools.git"
