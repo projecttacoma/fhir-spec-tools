@@ -7,3 +7,4 @@ export * as PatientSearchParameters from './data/patient-search-parameters';
 export * as PrimaryDatePaths from './data/primaryDatePaths';
 export * as PropertyPaths from './data/propertyPaths';
 export * as SystemMap from './data/systemMap';
+export * from './scripts/types/types';
