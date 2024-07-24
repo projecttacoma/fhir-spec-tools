@@ -1,4 +1,3 @@
-import { ElementDefinition } from 'fhir/r4';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -24,15 +23,21 @@ async function main() {
 
     // read the contents of the file
     const structureDef = JSON.parse(fs.readFileSync(f.fullPath, 'utf8')) as fhir4.StructureDefinition;
+    const resourceType = structureDef.id;
+    if (!resourceType) return;
+
     structureDef.snapshot?.element.forEach(e => {
-      const elem = e.id?.split('.');
-      if (elem && elem.length === 2) {
-        properties.push(elem[1]);
+      const typeAndElement = e.id?.split('.');
+      const notBaseElement = typeAndElement && typeAndElement.length === 2;
+      // makes sure not to get element with same name as the resource type (Account has elem "Account")
+      if (notBaseElement) {
+        const elem = typeAndElement[1];
+        elem.endsWith('[x]')
+          ? e.type?.forEach(type => properties.push(elem.split('[')[0] + type.code))
+          : properties.push(elem);
       }
     });
-    if (structureDef.id) {
-      parsedPropertyPathsResults[structureDef.id] = properties;
-    }
+    parsedPropertyPathsResults[resourceType] = properties;
   });
   return parsedPropertyPathsResults;
 }
