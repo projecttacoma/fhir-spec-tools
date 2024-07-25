@@ -33,10 +33,13 @@ async function main() {
       if (notBaseElement) {
         const elem = typeAndElement[1];
         elem.endsWith('[x]')
-          ? e.type?.forEach(type => properties.push(elem.split('[')[0] + type.code))
+          ? e.type?.forEach(type =>
+              properties.push(elem.split('[')[0] + type.code[0].toUpperCase().concat(type.code.slice(1)))
+            )
           : properties.push(elem);
       }
     });
+    console.log(properties);
     parsedPropertyPathsResults[resourceType] = properties;
   });
   return parsedPropertyPathsResults;
