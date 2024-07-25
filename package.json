@@ -1,6 +1,6 @@
 {
   "name": "fhir-spec-tools",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Scripts and other shared tooling for working with the HL7® FHIR® standard",
   "main": "build/index.js",
   "files": [
