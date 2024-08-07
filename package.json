@@ -30,6 +30,7 @@
     "build:dates": "ts-node src/scripts/parsePrimaryDatePath.ts && prettier --write src/data/primaryDatePaths.ts --log-level silent",
     "build:date-search-parameters": "ts-node src/scripts/parseDateSearchParam.ts && prettier --write src/data/dateSearchParameters.ts --log-level silent",
     "build:properties": "ts-node src/scripts/parseProperties.ts && prettier --write src/data/propertyPaths.ts --log-level silent",
+    "build:search-parameters": "ts-node src/scripts/parseSearchParams.ts && prettier --write src/data/searchParameters.ts --log-level silent",
     "prettier": "prettier --check \"**/*.{js,ts}\"",
     "prettier:fix": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint .",

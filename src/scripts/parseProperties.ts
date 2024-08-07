@@ -39,7 +39,6 @@ async function main() {
           : properties.push(elem);
       }
     });
-    console.log(properties);
     parsedPropertyPathsResults[resourceType] = properties;
   });
   return parsedPropertyPathsResults;
