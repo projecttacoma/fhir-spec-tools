@@ -61,3 +61,9 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
   - **Input**: structure definitions in folder resource-definitions (pulled from each resource profile, example: https://hl7.org/fhir/R4/encounter.profile.json)
   - **Output**: propertyPaths.ts
   - **Original repo**: fqm-testify parseProperties.ts, parse-properties branch
+- parseSearchParams.ts
+  - Run with `npm run build:search-parameters`
+  - **Purpose**: valid search parameters for each resource
+  - **Format**: create object whose keys are resourceTypes and values are an object whose keys are the search parameters for each type and whose values are the types associated with each search parameter
+  - **Input**: structure definitions in folder resource-definitions (pulled from each resource profile, example: https://hl7.org/fhir/R4/encounter.profile.json), and search-parameters.json (pulled from https://hl7.org/fhir/R4/search-parameters.json)
+  - **Output**: searchParameters.ts
