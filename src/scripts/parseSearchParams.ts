@@ -12,7 +12,7 @@ const jsonStr = fs.readFileSync(searchParameterPath, 'utf8');
 
 /**
  * Parse search parameters for each resource and get type of each parameter
- * @param {string} compartmentJson the string content of the full set of search parameters
+ * @param {string} searchParams the string content of the full set of search parameters
  * @return {Object} Record with each resource type and a record of search parameters associated with it and their types
  */
 async function parse(searchParams: string) {
@@ -49,10 +49,10 @@ async function parse(searchParams: string) {
   searchParamsBundle.entry?.forEach(entry => {
     const searchParam = entry.resource as SearchParameter;
     searchParam.base.forEach(resource => {
-      // If not base resource skip
-      if (supportedResources.includes(resource)) return;
-
-      baseResourceSearchParams[resource][searchParam.code] = searchParam.type;
+      // If base resource
+      if (resource === 'DomainResource' || resource === 'Resource') {
+        baseResourceSearchParams[resource][searchParam.code] = searchParam.type;
+      }
     });
   });
 
@@ -75,10 +75,10 @@ async function parse(searchParams: string) {
     const searchParam = entry.resource as SearchParameter;
 
     searchParam.base.forEach(resource => {
-      // If base resource skip
-      if (!supportedResources.includes(resource)) return;
-
-      searchParameterResults[resource][searchParam.code] = searchParam.type;
+      // If not base resource
+      if (resource !== 'DomainResource' && resource !== 'Resource') {
+        searchParameterResults[resource][searchParam.code] = searchParam.type;
+      }
     });
   });
 
