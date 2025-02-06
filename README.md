@@ -57,7 +57,7 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
 - parseExpressionSearchParam.ts
   - Run with `npm run build:expression-search-parameters`
   -	**Purpose**: build a map from expressions to the corresponding search parameter code
-  - **Format**: object whose keys are espressions and values are search parameter codes
+  - **Format**: object whose keys are expressions and values are search parameter codes
   -	**Input**: search-parameters.json from https://hl7.org/fhir/R4/search-parameters.json
   -	**Output**: expressionSearchParameters.ts
   - **Original repo**: none, created for fqm-bulk-utils
