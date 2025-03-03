@@ -34,6 +34,7 @@
     "build:expression-search-parameters": "ts-node src/scripts/parseExpressionSearchParam.ts && prettier --write src/data/expressionSearchParameters.ts --log-level silent",
     "build:properties": "ts-node src/scripts/parseProperties.ts && prettier --write src/data/propertyPaths.ts --log-level silent",
     "build:search-parameters": "ts-node src/scripts/parseSearchParams.ts && prettier --write src/data/searchParameters.ts --log-level silent",
+    "build:qi-core-code-paths": "ts-node src/scripts/parseQICoreModelInfo.ts && prettier --write src/data/primary-code-paths.ts --log-level silent",
     "prettier": "prettier --check \"**/*.{js,ts}\"",
     "prettier:fix": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint .",
