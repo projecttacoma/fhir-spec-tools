@@ -32,7 +32,7 @@ parse(xmlStr)
     fs.writeFileSync(
       outputPath,
       `
-        export const qiCorePrimaryCodePaths: Record<string, string> =
+        export const qiCore411PrimaryCodePaths: Record<string, string> =
           ${JSON.stringify(data, null, 2)};
         `,
       'utf8'

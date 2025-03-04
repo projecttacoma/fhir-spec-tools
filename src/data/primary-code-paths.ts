@@ -1,4 +1,4 @@
-export const qiCorePrimaryCodePaths: Record<string, string> = {
+export const qiCore411PrimaryCodePaths: Record<string, string> = {
   AdverseEvent: 'event',
   AllergyIntolerance: 'code',
   BodyStructure: 'location',

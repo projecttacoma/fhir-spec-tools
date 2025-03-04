@@ -76,7 +76,7 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
   - **Output**: searchParameters.ts
 - parseQICoreModelInfo.ts
   - Run with `npm run build:qi-core-code-paths`
-  - **Purpose**: primary code paths for each resource based on the qicore-modelinfo (rather than fhir-modelinfo for parseCodePath)
+  - **Purpose**: primary code paths for each resource based on the qicore-modelinfo 4.1.1(rather than fhir-modelinfo for parseCodePath)
   - **Format**: create object whose keys are resourceTypes and values have the resourceTypes' primaryCodePath
   - **Input**: qicore-modelinfo-4.1.1.xml
   - **Output**: primary-code-paths.ts
