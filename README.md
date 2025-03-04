@@ -56,10 +56,10 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
   - **Original repo**: fqm-execution (just files, script was not previously committed)
 - parseExpressionSearchParam.ts
   - Run with `npm run build:expression-search-parameters`
-  -	**Purpose**: build a map from expressions to the corresponding search parameter code
+  - **Purpose**: build a map from expressions to the corresponding search parameter code
   - **Format**: object whose keys are expressions and values are search parameter codes
-  -	**Input**: search-parameters.json from https://hl7.org/fhir/R4/search-parameters.json
-  -	**Output**: expressionSearchParameters.ts
+  - **Input**: search-parameters.json from https://hl7.org/fhir/R4/search-parameters.json
+  - **Output**: expressionSearchParameters.ts
   - **Original repo**: none, created for fqm-bulk-utils
 - parseProperties.ts
   - Run with `npm run build:properties`
@@ -74,3 +74,10 @@ Scripts and other shared tooling for working with the HL7® FHIR® standard
   - **Format**: create object whose keys are resourceTypes and values are an object whose keys are the search parameters for each type and whose values are the types associated with each search parameter
   - **Input**: structure definitions in folder resource-definitions (pulled from each resource profile, example: https://hl7.org/fhir/R4/encounter.profile.json), and search-parameters.json (pulled from https://hl7.org/fhir/R4/search-parameters.json)
   - **Output**: searchParameters.ts
+- parseQICoreModelInfo.ts
+  - Run with `npm run build:qi-core-code-paths`
+  - **Purpose**: primary code paths for each resource based on the qicore-modelinfo 4.1.1(rather than fhir-modelinfo for parseCodePath)
+  - **Format**: create object whose keys are resourceTypes and values have the resourceTypes' primaryCodePath
+  - **Input**: qicore-modelinfo-4.1.1.xml
+  - **Output**: primary-code-paths.ts
+  - **Original repo**: fqm-execution (data-requirements comparison script)
