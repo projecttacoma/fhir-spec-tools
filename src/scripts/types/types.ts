@@ -1,5 +1,5 @@
 export interface ResourceCodeInfo {
-  primaryCodePath: string;
+  primaryCodePath?: string;
   paths: Record<string, CodePathInfo>;
 }
 
