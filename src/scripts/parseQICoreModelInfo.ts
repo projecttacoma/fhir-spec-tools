@@ -3,9 +3,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as xml2js from 'xml2js';
 
-const modelInfoPath = path.resolve(path.join(__dirname, '../fhir/qicore-modelinfo-4.1.1.xml'));
+const specFolderPath = path.resolve(path.join(__dirname, '../fhir'));
 const outputPath = path.resolve(path.join(__dirname, '../data/primary-code-paths.ts'));
-const xmlStr = fs.readFileSync(modelInfoPath, 'utf8');
 
 /**
  * Parse QICore model info XML and output a map of resourceType => primary code path
@@ -27,18 +26,27 @@ async function parse(xml: string) {
   return res;
 }
 
-parse(xmlStr)
-  .then(data => {
-    fs.writeFileSync(
-      outputPath,
-      `
-        export const qiCore411PrimaryCodePaths: Record<string, string> =
-          ${JSON.stringify(data, null, 2)};
-        `,
-      'utf8'
-    );
-    console.log(`Wrote file to ${outputPath}`);
-  })
-  .catch(e => {
-    console.error(e);
-  });
+/**
+ * Scan src/fhir for QICore modelinfo files and generate a TS file with exported objects for each
+ * QICore model, where the object is a map of resourceType => primary code path . Assumes modelinfo
+ * file names with format: qicore-modelinfo-X.Y.Z.xml, where X, Y, and Z are major, minor, and patch
+ * components of version. Exported objects have corresponding name: QICoreXYZPrimaryCodePaths.
+ * Example: qicore-modelinfo-4.1.1.xml results in exported variable QICore411PrimaryCodePaths.
+ */
+async function main() {
+  const exports: string[] = [];
+  for (const file of fs.readdirSync(specFolderPath)) {
+    const match = file.match(/^qicore-modelinfo-(\d+)\.(\d+)\.(\d+)\.xml$/);
+    if (match) {
+      const name = `QICore${match[1]}${match[2]}${match[3]}PrimaryCodePaths`;
+      const xml = fs.readFileSync(path.resolve(specFolderPath, file), 'utf8');
+      const data = await parse(xml);
+      exports.push(`export const ${name}: Record<string, string> = ${JSON.stringify(data, null, 2)};`);
+    }
+  }
+
+  fs.writeFileSync(outputPath, exports.join('\n\n'), 'utf8');
+  console.log(`Wrote file to ${outputPath}`);
+}
+
+main();
