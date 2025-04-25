@@ -32,11 +32,13 @@ async function main() {
       // makes sure not to get element with same name as the resource type (Account has elem "Account")
       if (notBaseElement) {
         const elem = typeAndElement[1];
-        elem.endsWith('[x]')
-          ? e.type?.forEach(type =>
-              properties.push(elem.split('[')[0] + type.code[0].toUpperCase().concat(type.code.slice(1)))
-            )
-          : properties.push(elem);
+        if (elem.endsWith('[x]')) {
+          e.type?.forEach(type =>
+            properties.push(elem.split('[')[0] + type.code[0].toUpperCase().concat(type.code.slice(1)))
+          );
+        } else {
+          properties.push(elem);
+        }
       }
     });
     parsedPropertyPathsResults[resourceType] = properties;
