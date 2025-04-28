@@ -28,7 +28,7 @@ async function parse(xml: string) {
 
 /**
  * Scan src/fhir for QICore modelinfo files and generate a TS file with exported objects for each
- * QICore model, where the object is a map of resourceType => primary code path . Assumes modelinfo
+ * QICore model, where the object is a map of resourceType => primary code path. Assumes modelinfo
  * file names with format: qicore-modelinfo-X.Y.Z.xml, where X, Y, and Z are major, minor, and patch
  * components of version. Exported objects have corresponding name: QICoreXYZPrimaryCodePaths.
  * Example: qicore-modelinfo-4.1.1.xml results in exported variable QICore411PrimaryCodePaths.
