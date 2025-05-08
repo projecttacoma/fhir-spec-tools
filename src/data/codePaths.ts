@@ -1,6 +1,6 @@
 import { ResourceCodeInfo } from '../scripts/types/types';
 
-export const parsedCodePaths: Record<string, ResourceCodeInfo> = {
+export const FHIR401CodePaths: Record<string, ResourceCodeInfo> = {
   Account: {
     primaryCodePath: 'type',
     paths: {
@@ -3467,6 +3467,4435 @@ export const parsedCodePaths: Record<string, ResourceCodeInfo> = {
     paths: {
       status: {
         codeType: 'FHIR.code',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  }
+};
+
+export const QICore411CodePaths: Record<string, ResourceCodeInfo> = {
+  AdverseEvent: {
+    primaryCodePath: 'event',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      event: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      seriousness: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      severity: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      outcome: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  AllergyIntolerance: {
+    primaryCodePath: 'code',
+    paths: {
+      reasonRefuted: {
+        codeType: 'QICore.reasonRefuted',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      clinicalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      verificationStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  BodyStructure: {
+    primaryCodePath: 'location',
+    paths: {
+      morphology: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      location: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      locationQualifier: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  CarePlan: {
+    primaryCodePath: 'category',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      AssessPlan: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  CareTeam: {
+    primaryCodePath: 'category',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Claim: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      subType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      priority: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      fundsReserve: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Communication: {
+    primaryCodePath: 'reasonCode',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medium: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      topic: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  CommunicationNotDone: {
+    primaryCodePath: 'reasonCode',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medium: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      topic: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      }
+    }
+  },
+  CommunicationRequest: {
+    primaryCodePath: 'category',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medium: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Condition: {
+    primaryCodePath: 'code',
+    paths: {
+      clinicalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      verificationStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      severity: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Coverage: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      relationship: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Device: {
+    primaryCodePath: 'type',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      safety: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DeviceNotRequested: {
+    primaryCodePath: 'code',
+    paths: {
+      doNotPerformReason: {
+        codeType: 'QICore.DoNotPerformReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DeviceRequest: {
+    primaryCodePath: 'code',
+    paths: {
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DeviceUseStatement: {
+    primaryCodePath: 'device.type',
+    paths: {
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  DiagnosticReportLab: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      LaboratorySlice: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      conclusionCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DiagnosticReportNote: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      conclusionCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Encounter: {
+    primaryCodePath: 'type',
+    paths: {
+      statusReason: {
+        codeType: 'QICore.statusReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      class: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      serviceType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      priority: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  FamilyMemberHistory: {
+    primaryCodePath: 'relationship',
+    paths: {
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      relationship: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      sex: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Flag: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Goal: {
+    primaryCodePath: 'category',
+    paths: {
+      reasonRejected: {
+        codeType: 'QICore.reasonRejected',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      achievementStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      priority: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      description: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      outcomeCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ImagingStudy: {
+    primaryCodePath: 'procedureCode',
+    paths: {
+      modality: {
+        codeType: 'System.Code',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      procedureCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Immunization: {
+    primaryCodePath: 'vaccineCode',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      vaccineCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reportOrigin: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      site: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      route: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      subpotentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      programEligibility: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      fundingSource: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ImmunizationEvaluation: {
+    primaryCodePath: 'targetDisease',
+    paths: {
+      targetDisease: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      doseStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      doseStatusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ImmunizationNotDone: {
+    primaryCodePath: 'vaccineCode',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      vaccineCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reportOrigin: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      site: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      route: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      subpotentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      programEligibility: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      fundingSource: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ImmunizationRecommendation: {
+    primaryCodePath: 'recommendation.vaccineCode',
+    paths: {}
+  },
+  Location: {
+    primaryCodePath: 'type',
+    paths: {
+      operationalStatus: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      physicalType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Medication: {
+    primaryCodePath: 'code',
+    paths: {
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      form: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationAdministration: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  MedicationAdministrationNotDone: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  MedicationDispense: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationDispenseNotDone: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationNotRequested: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      courseOfTherapyType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationRequest: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      courseOfTherapyType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationStatement: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Observation: {
+    primaryCodePath: 'code',
+    paths: {
+      bodyPosition: {
+        codeType: 'QICore.bodyPosition',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      delta: {
+        codeType: 'QICore.delta',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ObservationNotDone: {
+    primaryCodePath: 'code',
+    paths: {
+      notDoneReason: {
+        codeType: 'QICore.NotDoneReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Organization: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Patient: {
+    paths: {
+      religion: {
+        codeType: 'QICore.religion',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      disability: {
+        codeType: 'QICore.disability',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      maritalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Practitioner: {
+    paths: {
+      communication: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  PractitionerRole: {
+    primaryCodePath: 'code',
+    paths: {
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      specialty: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Procedure: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      outcome: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      complication: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      followUp: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      usedCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ProcedureNotDone: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      outcome: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      complication: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      followUp: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      usedCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Questionnaire: {
+    primaryCodePath: 'name',
+    paths: {
+      jurisdiction: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Code',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  QuestionnaireResponse: {
+    paths: {}
+  },
+  RelatedPerson: {
+    primaryCodePath: 'relationship',
+    paths: {
+      relationship: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ServiceNotRequested: {
+    primaryCodePath: 'code',
+    paths: {
+      reasonRefused: {
+        codeType: 'QICore.DoNotPerformReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      orderDetail: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      asNeeded: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      locationCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ServiceRequest: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'QICore.statusReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      orderDetail: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      asNeeded: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      locationCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Specimen: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      condition: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Substance: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Task: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      businessStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  TaskNotDone: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      businessStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreImplantableDeviceProfile: {
+    primaryCodePath: 'type',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      safety: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  USCoreLaboratoryResultObservationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      Laboratory: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePediatricBMIforAgeObservationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePediatricWeightForHeightObservationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePulseOximetryProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      OxygenSatCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      PulseOx: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreSmokingStatusProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-bmi': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      BMICode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-bodyheight': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      BodyHeightCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-bodytemp': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      BodyTempCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-bodyweight': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      BodyWeightCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-bp': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      BPCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-headcircum': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      HeadCircumCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-heartrate': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      HeartRateCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-oxygensat': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      OxygenSatCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-resprate': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      RespRateCode: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  'observation-vitalspanel': {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      VitalsPanelCode: {
+        codeType: 'System.Code',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  }
+};
+
+export const QICore600CodePaths: Record<string, ResourceCodeInfo> = {
+  AdverseEvent: {
+    primaryCodePath: 'event',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      event: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      seriousness: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      severity: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      outcome: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  AllergyIntolerance: {
+    primaryCodePath: 'code',
+    paths: {
+      clinicalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      verificationStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  BodyStructure: {
+    primaryCodePath: 'location',
+    paths: {
+      morphology: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      location: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      locationQualifier: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  CarePlan: {
+    primaryCodePath: 'category',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      AssessPlan: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  CareTeam: {
+    primaryCodePath: 'category',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Claim: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      subType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      priority: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      fundsReserve: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ClaimResponse: {
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      subType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      payeeType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      fundsReserve: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      formCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Communication: {
+    primaryCodePath: 'topic',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medium: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      topic: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  CommunicationNotDone: {
+    primaryCodePath: 'topic',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medium: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      topic: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  CommunicationRequest: {
+    primaryCodePath: 'category',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medium: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ConditionEncounterDiagnosis: {
+    primaryCodePath: 'code',
+    paths: {
+      clinicalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      verificationStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      severity: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ConditionProblemsHealthConcerns: {
+    primaryCodePath: 'code',
+    paths: {
+      clinicalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      verificationStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'screening-assessment': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      severity: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Coverage: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      relationship: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Device: {
+    primaryCodePath: 'type',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      safety: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DeviceNotRequested: {
+    primaryCodePath: 'code',
+    paths: {
+      doNotPerformReason: {
+        codeType: 'QICore.DoNotPerformReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DeviceRequest: {
+    primaryCodePath: 'code',
+    paths: {
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DeviceUseStatement: {
+    primaryCodePath: 'device.type',
+    paths: {
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  DiagnosticReportLab: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      LaboratorySlice: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      conclusionCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  DiagnosticReportNote: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      conclusionCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Encounter: {
+    primaryCodePath: 'type',
+    paths: {
+      class: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      serviceType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      priority: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  FamilyMemberHistory: {
+    primaryCodePath: 'relationship',
+    paths: {
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      relationship: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      sex: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Flag: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Goal: {
+    primaryCodePath: 'category',
+    paths: {
+      achievementStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      priority: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      description: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      start: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      outcomeCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ImagingStudy: {
+    primaryCodePath: 'procedureCode',
+    paths: {
+      modality: {
+        codeType: 'System.Code',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      procedureCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Immunization: {
+    primaryCodePath: 'vaccineCode',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      vaccineCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reportOrigin: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      site: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      route: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      subpotentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      programEligibility: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      fundingSource: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ImmunizationEvaluation: {
+    primaryCodePath: 'targetDisease',
+    paths: {
+      targetDisease: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      doseStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      doseStatusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ImmunizationNotDone: {
+    primaryCodePath: 'vaccineCode',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      vaccineCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reportOrigin: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      site: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      route: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      subpotentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      programEligibility: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      fundingSource: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ImmunizationRecommendation: {
+    primaryCodePath: 'recommendation.vaccineCode',
+    paths: {}
+  },
+  LaboratoryResultObservation: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Location: {
+    primaryCodePath: 'type',
+    paths: {
+      operationalStatus: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      physicalType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Medication: {
+    primaryCodePath: 'code',
+    paths: {
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      form: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationAdministration: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  MedicationAdministrationNotDone: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  MedicationDispense: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationDispenseDeclined: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationNotRequested: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      courseOfTherapyType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationRequest: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      courseOfTherapyType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  MedicationStatement: {
+    primaryCodePath: 'medication',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      medication: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  NonPatientObservation: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  NutritionOrder: {
+    paths: {
+      foodPreferenceModifier: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      excludeFoodModifier: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ObservationCancelled: {
+    primaryCodePath: 'code',
+    paths: {
+      notDoneReason: {
+        codeType: 'QICore.NotDoneReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ObservationClinicalResult: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  ObservationScreeningAssessment: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      survey: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      'screening-assessment': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Organization: {
+    primaryCodePath: 'type',
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Patient: {
+    paths: {
+      genderIdentity: {
+        codeType: 'QICore.USCoreGenderIdentityExtension',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      maritalStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Practitioner: {
+    paths: {
+      communication: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  PractitionerRole: {
+    primaryCodePath: 'code',
+    paths: {
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      specialty: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Procedure: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      outcome: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      complication: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      followUp: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      usedCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ProcedureNotDone: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      outcome: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      complication: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      followUp: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      usedCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  Questionnaire: {
+    primaryCodePath: 'name',
+    paths: {
+      jurisdiction: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Code',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  QuestionnaireResponse: {
+    paths: {
+      completionMode: {
+        codeType: 'QICore.completionMode',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  RelatedPerson: {
+    primaryCodePath: 'relationship',
+    paths: {
+      relationship: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ServiceNotRequested: {
+    primaryCodePath: 'code',
+    paths: {
+      reasonRefused: {
+        codeType: 'QICore.DoNotPerformReason',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      orderDetail: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      asNeeded: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      locationCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  ServiceRequest: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      orderDetail: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      asNeeded: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      locationCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  SimpleObservation: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      'us-core': {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Substance: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  Task: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      businessStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  TaskRejected: {
+    primaryCodePath: 'code',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      businessStatus: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      performerType: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      reasonCode: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreBMIProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreBloodPressureProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreBodyHeightProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreBodyTemperatureProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreBodyWeightProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreHeadCircumferenceProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreHeartRateProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreImplantableDeviceProfile: {
+    primaryCodePath: 'type',
+    paths: {
+      statusReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      safety: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  USCoreObservationOccupationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      socialhistory: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreObservationPregnancyIntentProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      SocialHistory: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreObservationPregnancyStatusProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      SocialHistory: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreObservationSexualOrientationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePediatricBMIforAgeObservationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePediatricWeightForHeightObservationProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCorePulseOximetryProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      PulseOx: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      O2Sat: {
+        codeType: 'System.Code',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreRespiratoryRateProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreSmokingStatusProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      SocialHistory: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      }
+    }
+  },
+  USCoreSpecimenProfile: {
+    paths: {
+      type: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      condition: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      }
+    }
+  },
+  USCoreVitalSignsProfile: {
+    primaryCodePath: 'code',
+    paths: {
+      category: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      VSCat: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      code: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      value: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: true
+      },
+      dataAbsentReason: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      interpretation: {
+        codeType: 'System.Concept',
+        multipleCardinality: true,
+        choiceType: false
+      },
+      bodySite: {
+        codeType: 'System.Concept',
+        multipleCardinality: false,
+        choiceType: false
+      },
+      method: {
+        codeType: 'System.Concept',
         multipleCardinality: false,
         choiceType: false
       }
