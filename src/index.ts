@@ -1,5 +1,4 @@
 export * as ChoiceTypes from './data/choiceTypes';
-export * as CodePaths from './data/codePaths';
 export * as DateSearchParameters from './data/dateSearchParameters';
 export * as ExpressionSearchParameters from './data/expressionSearchParameters';
 export * as MandatoryElements from './data/mandatoryElements';
@@ -8,5 +7,6 @@ export * as PatientSearchParameters from './data/patient-search-parameters';
 export * as PrimaryDatePaths from './data/primaryDatePaths';
 export * as PropertyPaths from './data/propertyPaths';
 export * as SystemMap from './data/systemMap';
+export * from './data/codePaths';
 export * from './data/primary-code-paths';
 export * from './scripts/types/types';
